@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  perspective: 1200px;
+}
+
+.card {
+  width: 300px;
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  backface-visibility: hidden;
+}
+
+.front img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.front h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.front p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.back h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.back ul {
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.glow {
+  animation: flicker 2s infinite;
+  color: #ff96f0;
+  text-shadow: 0 0 5px #ff96f0, 0 0 10px #ff96f0, 0 0 20px #ff96f0;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
+
+.profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    z-index: 3;
+    position: relative;
+}
+.tag {
+    background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+    color: #6a11cb;
+    font-family: 'Montserrat', 'Courier New', Courier, monospace;
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 14px;
+    box-shadow: 0 1px 4px #fcb69f44;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border: 1.5px solid #fff;
+    opacity: 0.95;
+    animation: floatTag 3s ease-in-out infinite alternate;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+.tag:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 2px 8px #fcb69faa;
+    opacity: 1;
+}
+@keyframes floatTag {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+/* Remove hover flip */
+.card:hover {
+  transform: none;
+}
+
+/* Flip on JS toggle */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* BGM toggle button */
+#toggleBgm {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 8px rgba(255,255,255,0.4);
+  z-index: 999;
+}
+
+#toggleBgm:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+@media (max-width: 600px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+    font-size: 15px;
+  }
+  .card-container {
+    padding: 0;
+    margin: 0;
+  }
+  .card {
+    width: 95vw;
+    max-width: 340px;
+    height: 68vw;
+    max-height: 92vw;
+    min-height: 380px;
+    min-width: 220px;
+  }
+  .front, .back {
+    padding: 12px 6px 16px 6px;
+    border-radius: 14px;
+  }
+  .front img {
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .front h1 {
+    font-size: 1.2rem;
+    margin-bottom: 7px;
+  }
+  .front p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}
