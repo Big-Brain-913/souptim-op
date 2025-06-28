@@ -5,7 +5,7 @@
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(180deg, #0a0414, #1c0b33);
+      background: linear-gradient(180deg, #0a2e4f, #1a4d7a);
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -20,7 +20,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #0a0414;
+      background: #0a2e4f;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -36,8 +36,8 @@
     .loading-screen h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 36px;
-      color: #ff0055;
-      text-shadow: 0 0 15px #ff0055;
+      color: #00f7ff;
+      text-shadow: 0 0 15px #00f7ff;
       animation: neon 1.5s ease-in-out infinite alternate;
     }
     .start-btn {
@@ -45,12 +45,12 @@
       padding: 15px 30px;
       font-family: 'Orbitron', sans-serif;
       font-size: 18px;
-      background: linear-gradient(90deg, #ff0055, #ff4d94);
+      background: linear-gradient(90deg, #00f7ff, #00b7c2);
       border: none;
       border-radius: 10px;
       color: #fff;
       cursor: pointer;
-      box-shadow: 0 0 20px #ff0055;
+      box-shadow: 0 0 20px #00f7ff;
       transition: transform 0.3s;
     }
     .start-btn:hover {
@@ -86,9 +86,9 @@
       position: absolute;
       border-radius: 25px;
       padding: 20px;
-      background: linear-gradient(145deg, rgba(20, 20, 30, 0.95), rgba(10, 10, 20, 0.85));
+      background: linear-gradient(145deg, rgba(10, 46, 79, 0.95), rgba(5, 23, 40, 0.85));
       backdrop-filter: blur(15px);
-      border: 2px solid #ff0055;
+      border: 2px solid #00f7ff;
       transition: transform 0.5s ease-in-out;
     }
     .card.hidden {
@@ -112,8 +112,8 @@
     .front h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 32px;
-      color: #ff0055;
-      text-shadow: 0 0 15px #ff0055;
+      color: #00f7ff;
+      text-shadow: 0 0 15px #00f7ff;
       animation: neon 1.5s ease-in-out infinite alternate;
       margin-bottom: 10px;
       text-align: center;
@@ -122,11 +122,11 @@
       font-size: 14px;
       line-height: 1.6;
       text-align: center;
-      color: #ddd;
+      color: #e0f7ff;
       margin-bottom: 15px;
       overflow: hidden;
       white-space: nowrap;
-      border-right: 2px solid #ff0055;
+      border-right: 2px solid #00f7ff;
       animation: typing 4s steps(60, end), blink-caret 0.75s step-end infinite;
     }
     .profile-tags {
@@ -136,7 +136,7 @@
       gap: 10px;
     }
     .tag {
-      background: linear-gradient(90deg, #ff0055, #ff4d94);
+      background: linear-gradient(90deg, #00f7ff, #00b7c2);
       color: #fff;
       font-family: 'Orbitron', sans-serif;
       font-size: 12px;
@@ -148,7 +148,7 @@
     }
     .tag:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 15px #ff0055;
+      box-shadow: 0 0 15px #00f7ff;
     }
     .social-links {
       display: flex;
@@ -162,7 +162,7 @@
       transition: color 0.3s, transform 0.3s;
     }
     .social-links a:hover {
-      color: #ff0055;
+      color: #00f7ff;
       transform: scale(1.2);
     }
     .facts, .achievements {
@@ -175,8 +175,8 @@
     .facts h2, .achievements h2 {
       font-family: 'Orbitron', sans-serif;
       font-size: 26px;
-      color: #ff4d94;
-      text-shadow: 0 0 10px #ff4d94;
+      color: #00b7c2;
+      text-shadow: 0 0 10px #00b7c2;
       margin-bottom: 20px;
     }
     .facts ul {
@@ -187,7 +187,7 @@
     }
     .facts ul li:before {
       content: '🎮 ';
-      color: #ff0055;
+      color: #00f7ff;
     }
     .achievements-list {
       display: flex;
@@ -196,7 +196,7 @@
       gap: 10px;
     }
     .achievement {
-      background: linear-gradient(90deg, #ff4d94, #ff0055);
+      background: linear-gradient(90deg, #00b7c2, #00f7ff);
       color: #fff;
       font-family: 'Orbitron', sans-serif;
       font-size: 12px;
@@ -207,7 +207,7 @@
     }
     .achievement:hover {
       transform: rotate(-5deg) scale(1.1);
-      box-shadow: 0 0 15px #ff4d94;
+      box-shadow: 0 0 15px #00b7c2;
     }
     #toggleBgm {
       position: fixed;
@@ -215,12 +215,12 @@
       right: 20px;
       width: 60px;
       height: 60px;
-      background: linear-gradient(90deg, #ff0055, #ff4d94);
+      background: linear-gradient(90deg, #00f7ff, #00b7c2);
       border: none;
       border-radius: 50%;
       color: #fff;
       font-size: 28px;
-      box-shadow: 0 0 20px #ff0055;
+      box-shadow: 0 0 20px #00f7ff;
       transition: transform 0.2s;
       z-index: 999;
     }
@@ -236,7 +236,7 @@
       padding: 10px 20px;
       font-family: 'Orbitron', sans-serif;
       font-size: 14px;
-      background: linear-gradient(90deg, #ff0055, #ff4d94);
+      background: linear-gradient(90deg, #00f7ff, #00b7c2);
       border: none;
       border-radius: 10px;
       color: #fff;
@@ -247,13 +247,13 @@
       transform: scale(1.1);
     }
     @keyframes neon {
-      from { text-shadow: 0 0 5px #ff0055, 0 0 10px #ff0055, 0 0 20px #ff0055; }
-      to { text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 40px #ff0055; }
+      from { text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff; }
+      to { text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 40px #00f7ff; }
     }
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0.7); }
-      70% { box-shadow: 0 0 0 10px rgba(255, 0, 85, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(0, 247, 255, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 247, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 247, 255, 0); }
     }
     @keyframes typing {
       from { width: 0; }
@@ -261,7 +261,7 @@
     }
     @keyframes blink-caret {
       from, to { border-color: transparent; }
-      50% { border-color: #ff0055; }
+      50% { border-color: #00f7ff; }
     }
     @media (max-width: 600px) {
       .card-container {

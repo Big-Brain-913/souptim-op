@@ -1,4 +1,4 @@
-  // Audio handling
+ // Audio handling
     const bgm = document.getElementById('bgm');
     const clickSound = document.getElementById('clickSound');
     const hoverSound = document.getElementById('hoverSound');
@@ -51,7 +51,7 @@
         this.size = Math.random() * 8 + 3;
         this.speedX = Math.random() * 5 - 2.5;
         this.speedY = Math.random() * 5 - 2.5;
-        this.color = `hsl(${Math.random() * 60 + 340}, 80%, 60%)`;
+        this.color = `hsl(${Math.random() * 30 + 180}, 80%, 60%)`; // Cyan/teal hues
       }
       update() {
         this.x += this.speedX;
@@ -84,9 +84,7 @@
       requestAnimationFrame(animate);
     }
 
-   
-
- animate();
+    animate();
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
