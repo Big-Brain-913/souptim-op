@@ -3,52 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Souptim OP</title>
+  <title>Souptim OP - CODM Legend</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- BGM -->
-  <audio id="bgm" autoplay loop>
+  <div class="loading-screen" id="loadingScreen">
+    <h1>Souptim OP: CODM Legend</h1>
+    <button class="start-btn" id="startBtn">Start Experience</button>
+  </div>
+  <canvas class="canvas" id="particleCanvas"></canvas>
+  <audio id="bgm" loop>
     <source src="bgm.mp3" type="audio/mp3">
     Your browser does not support the audio tag.
   </audio>
-
-  <!-- BGM Toggle Button -->
-  <button id="toggleBgm">🔊</button>
-
-  <!-- Card -->
-  <div class="card-container">
-    <div class="card" id="souptimCard">
-      <div class="front">
-        <img src="souptim.jpg" alt="Souptim the legend">
-        <h1 class="glow">Souptim op</h1>
-        <p>
-          Souptim is CODM paglu who loves making friends, lives and loves life,<br>
-          shows occasional 🍺🚬 behaviour. A lover boy with temporary red flag issues<br>
-          and lowkey a jack of all but master of none (except CODM).
+  <audio id="clickSound" src="click.mp3"></audio>
+  <audio id="hoverSound" src="hover.mp3"></audio>
+  <div class="content" id="content">
+    <div class="card-container">
+      <div class="card front active" id="bioCard">
+        <img src="souptim.jpg" alt="Souptim the Legend">
+        <h1>Souptim OP</h1>
+        <p class="typewriter">
+          Souptim, the CODM warlord, dominates lobbies with epic skill... A social king who lives for friendships... Rocks a 🍺🚬 vibe... A romantic with a wild streak... CODM master, life’s jack of all trades...
         </p>
         <div class="profile-tags">
-          <div class="tag">🍻 Drinker</div>
-          <div class="tag">🔥 CODM God</div>
-          <div class="tag">💔 Emotional Damage</div>
-          <div class="tag">🚬 Smoker</div>
-          <div class="tag">😈 Simp</div>
-          <div class="tag">🎮 Gamer</div>
+          <div class="tag">🍻 Party Warlord</div>
+          <div class="tag">🔥 CODM Titan</div>
+          <div class="tag">💔 Heart Sniper</div>
+          <div class="tag">🚬 Rebel Edge</div>
+          <div class="tag">😈 Simp Soldier</div>
+          <div class="tag">🎮 Battle Beast</div>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com/souptim" target="_blank" class="social-btn">📸</a>
+          <a href="https://facebook.com/souptim" target="_blank" class="social-btn">📘</a>
+          <a href="https://discord.gg/souptim" target="_blank" class="social-btn">💬</a>
         </div>
       </div>
-      <div class="back">
-        <h2>Fun Facts 🤯</h2>
+      <div class="card facts hidden" id="factsCard">
+        <h2>Epic Facts 🤯</h2>
         <ul>
-          <li>Had sex with someone who's twice his age...</li>
-          <li>Have 13 birthmarks</li>
-          <li>Can control every part of head</li>
-          <li>Hates Ilish Maach... And prefers Chicken over Mutton...</li>
-          <li>uses "..." after the completion of each sentence</li>
+          <li>Rocking 13 unique birthmarks...</li>
+          <li>Controls every head muscle like a pro...</li>
+          <li>Hates Ilish Maach, picks Chicken over Mutton...</li>
+          <li>Ends every sentence with "..."</li>
         </ul>
       </div>
+      <div class="card achievements hidden" id="achievementsCard">
+        <h2>Legendary Achievements 🏆</h2>
+        <div class="achievements-list">
+          <div class="achievement">🎮 CODM Mastery</div>
+          <div class="achievement">🎉 Social Superstar</div>
+          <div class="achievement">💪 Headspace Hero</div>
+          <div class="achievement">🔥 Epic Life Vibes</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-nav">
+      <button class="nav-btn" data-card="bioCard">Bio</button>
+      <button class="nav-btn" data-card="factsCard">Facts</button>
+      <button class="nav-btn" data-card="achievementsCard">Achievements</button>
     </div>
   </div>
-
+  <button id="toggleBgm">🔊</button>
   <script src="script.js"></script>
 </body>
 </html>
