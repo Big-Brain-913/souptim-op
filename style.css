@@ -289,7 +289,7 @@
       }
 
       .main-layout {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 15px;
         align-items: center;
         width: 100%;
@@ -385,6 +385,7 @@
       .card-nav {
         gap: 8px;
         margin-top: 8px;
+        order: -1;
       }
 
       .nav-btn {
@@ -511,29 +512,7 @@
 
     .loadouts-container {
       height: calc(100% - 60px);
-      overflow-y: auto;
-      scroll-behavior: smooth;
       padding-right: 10px;
-    }
-
-    .loadouts-container::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .loadouts-container::-webkit-scrollbar-track {
-      background: rgba(10, 46, 79, 0.3);
-      border-radius: 10px;
-    }
-
-    .loadouts-container::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #00f7ff, #00b7c2);
-      border-radius: 10px;
-      border: 1px solid #00f7ff;
-    }
-
-    .loadouts-container::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(180deg, #00b7c2, #00f7ff);
-      box-shadow: 0 0 10px #00f7ff;
     }
 
     .loadout-item {
@@ -547,17 +526,6 @@
       opacity: 0;
       animation: slideInUp 0.6s ease forwards;
     }
-
-    .loadout-item:nth-child(1) { animation-delay: 0.1s; }
-    .loadout-item:nth-child(2) { animation-delay: 0.2s; }
-    .loadout-item:nth-child(3) { animation-delay: 0.3s; }
-    .loadout-item:nth-child(4) { animation-delay: 0.4s; }
-    .loadout-item:nth-child(5) { animation-delay: 0.5s; }
-    .loadout-item:nth-child(6) { animation-delay: 0.6s; }
-    .loadout-item:nth-child(7) { animation-delay: 0.7s; }
-    .loadout-item:nth-child(8) { animation-delay: 0.8s; }
-    .loadout-item:nth-child(9) { animation-delay: 0.9s; }
-    .loadout-item:nth-child(10) { animation-delay: 1.0s; }
 
     .loadout-item:hover {
       transform: translateY(-5px) scale(1.02);
@@ -609,9 +577,4 @@
         transform: translateY(0);
         opacity: 1;
       }
-    }
-
-    @keyframes autoScroll {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-100%); }
     }

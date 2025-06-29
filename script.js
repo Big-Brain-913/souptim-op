@@ -90,72 +90,32 @@ window.addEventListener('resize', () => {
   canvas.height = window.innerHeight;
 });
 
-// Autoscroll functionality for Loadouts section
-const loadoutsContainer = document.querySelector('.loadouts-container');
-let isAutoScrolling = true;
-let scrollSpeed = 0.8; // Reduced speed for mobile
-let scrollDirection = 1;
-let lastScrollTime = 0;
-let isMobile = window.innerWidth <= 600;
-
-function autoScroll() {
-  if (!isAutoScrolling) return;
-  
-  const now = Date.now();
-  const delay = isMobile ? 80 : 50; // Slower on mobile
-  
-  if (now - lastScrollTime > delay) {
-    const scrollTop = loadoutsContainer.scrollTop;
-    const scrollHeight = loadoutsContainer.scrollHeight;
-    const clientHeight = loadoutsContainer.clientHeight;
-    
-    if (scrollTop >= scrollHeight - clientHeight - 10) {
-      scrollDirection = -1; // Reverse direction
-    } else if (scrollTop <= 10) {
-      scrollDirection = 1; // Forward direction
-    }
-    
-    loadoutsContainer.scrollTop += scrollSpeed * scrollDirection;
-    lastScrollTime = now;
-  }
-  
-  requestAnimationFrame(autoScroll);
-}
-
-// Pause autoscroll on hover (desktop)
-if (!isMobile) {
-  loadoutsContainer.addEventListener('mouseenter', () => {
-    isAutoScrolling = false;
-  });
-
-  loadoutsContainer.addEventListener('mouseleave', () => {
-    isAutoScrolling = true;
-  });
-}
-
-// Pause autoscroll on touch (mobile)
-let touchTimeout;
-loadoutsContainer.addEventListener('touchstart', () => {
-  isAutoScrolling = false;
-  clearTimeout(touchTimeout);
+// Swiper initialization for Loadouts section
+const swiper = new Swiper('.loadouts-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 });
-
-loadoutsContainer.addEventListener('touchend', () => {
-  touchTimeout = setTimeout(() => {
-    isAutoScrolling = true;
-  }, 3000); // Longer pause on mobile
-});
-
-// Handle window resize
-window.addEventListener('resize', () => {
-  isMobile = window.innerWidth <= 600;
-  scrollSpeed = isMobile ? 0.8 : 1;
-});
-
-// Start autoscroll after fade-in animation
-setTimeout(() => {
-  autoScroll();
-}, 2000);
 
 // Fade-in animation for Loadouts section
 const loadoutsSection = document.getElementById('loadoutsSection');
