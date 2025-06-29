@@ -13,20 +13,25 @@
 </head>
 
 <body>
-  <div class="loading-screen" id="loadingScreen">
-    <h1>Souptim OP: CODM Legend</h1>
-    <button class="start-btn" id="startBtn">Start Experience</button>
-  </div>
-  <canvas class="canvas" id="particleCanvas"></canvas>
-  <audio id="bgm" loop>
-    <source src="bgm.mp3" type="audio/mp3">
-    Your browser does not support the audio tag.
-  </audio>
-  <div class="content" id="content">
-    <div class="main-layout">
-      <div class="card-container">
-        <div class="card front active" id="bioCard">
-          <img src="souptim.jpg" alt="Souptim the Legend">
+  <nav class="top-nav">
+    <button id="homeBtn" class="nav-btn active">🏠 Home</button>
+    <button id="codmIdBtn" class="nav-btn">📛 My CODM ID</button>
+  </nav>
+  <main id="mainPage">
+    <div class="loading-screen" id="loadingScreen">
+      <h1>Souptim OP: CODM Legend</h1>
+      <button class="start-btn" id="startBtn">Start Experience</button>
+    </div>
+    <canvas class="canvas" id="particleCanvas"></canvas>
+    <audio id="bgm" loop>
+      <source src="bgm.mp3" type="audio/mp3">
+      Your browser does not support the audio tag.
+    </audio>
+    <div class="content" id="content">
+      <div class="main-layout">
+        <div class="card-container">
+          <div class="card front active" id="bioCard">
+            <img src="souptim.jpg" alt="Souptim the Legend">
           <h1>Souptim OP</h1>
           <p class="typewriter">
             Souptim, the CODM warlord, dominates lobbies...
@@ -75,67 +80,67 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/locus.jpg" alt="LOCUS Build">
+                <img src="img/locus.jpg" alt="LOCUS Build">
               </div>
               <div class="loadout-caption">🔥 LOCUS Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/dlq.jpg" alt="DLQ Build">
+                <img src="img/dlq.jpg" alt="DLQ Build">
               </div>
               <div class="loadout-caption">💀 DLQ Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/fennec.jpg" alt="FENNEC Build">
+                <img src="img/fennec.jpg" alt="FENNEC Build">
               </div>
               <div class="loadout-caption">⚡ FENNEC Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/koshka.jpg" alt="KOSHKA Build">
+                <img src="img/koshka.jpg" alt="KOSHKA Build">
               </div>
               <div class="loadout-caption">🎯 KOSHKA Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/tundra.jpg" alt="TUNDRA Build">
+                <img src="img/tundra.jpg" alt="TUNDRA Build">
               </div>
               <div class="loadout-caption">🚀 TUNDRA Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/qq9.jpg" alt="QQ9 Build">
+                <img src="img/qq9.jpg" alt="QQ9 Build">
               </div>
               <div class="loadout-caption">🔥 QQ9 Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/argus.jpg" alt="ARGUS Build">
+                <img src="img/argus.jpg" alt="ARGUS Build">
               </div>
               <div class="loadout-caption">💪 ARGUS Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/oden.jpg" alt="ODEN Build">
+                <img src="img/oden.jpg" alt="ODEN Build">
               </div>
               <div class="loadout-caption">⚔️ ODEN Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/grau.jpg" alt="GRAU Build">
+                <img src="img/grau.jpg" alt="GRAU Build">
               </div>
               <div class="loadout-caption">🎮 GRAU Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/cx9.jpg" alt="CX-9 Build">
+                <img src="img/cx9.jpg" alt="CX-9 Build">
               </div>
               <div class="loadout-caption">🎮 CX-9 Build</div>
             </div>
             <div class="swiper-slide loadout-item">
               <div class="loadout-image">
-                <img src="../img/zrg.jpg" alt="ZRG Build">
+                <img src="img/zrg.jpg" alt="ZRG Build">
               </div>
               <div class="loadout-caption">🔥 ZRG Build</div>
             </div>
@@ -153,8 +158,16 @@
       <button class="nav-btn" data-card="factsCard">Facts</button>
       <button class="nav-btn" data-card="achievementsCard">Achievements</button>
     </div>
-  </div>
-  <button id="toggleBgm">🔊</button>
+    </div>
+    <button id="toggleBgm">🔊</button>
+  </main>
+  <section id="codmIdPage" class="view-section hidden">
+    <div class="codm-id-content">
+      <h1 class="section-title">📛 Souptim's Player ID</h1>
+      <p class="subtitle">This isn't just a number, it's a warning.</p>
+      <img src="img/id.jpg" alt="Souptim's CODM Player ID">
+    </div>
+  </section>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>

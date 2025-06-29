@@ -13,7 +13,7 @@
       overflow-x: hidden;
       color: #fff;
       position: relative;
-      padding: 20px 10px;
+      padding: 80px 10px 20px;
     }
     .loading-screen {
       position: fixed;
@@ -283,198 +283,345 @@
       50% { border-color: #00f7ff; }
     }
     @media (max-width: 600px) {
+      body {
+        padding: 60px 5px 10px;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
       .content {
-        padding: 10px;
-        gap: 15px;
+        padding: 5px;
+        gap: 5px;
+        min-height: auto;
+        justify-content: flex-start;
       }
 
       .main-layout {
-        flex-direction: column-reverse;
-        gap: 15px;
+        flex-direction: column;
+        gap: 5px;
         align-items: center;
         width: 100%;
+        max-width: 100%;
       }
 
       .card-container {
-        height: 450px;
+        height: auto;
+        min-height: 320px;
         width: 100%;
-        max-width: 320px;
+        max-width: 350px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+      }
+
+      .card {
+        position: relative;
+        height: auto;
+        min-height: 320px;
+        padding: 10px;
       }
 
       .front img {
-        height: 150px;
+        height: 140px;
+        margin-bottom: 8px;
       }
 
       .front h1 {
         font-size: 20px;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
       }
 
       .typewriter {
-        font-size: 11px;
-        margin-bottom: 12px;
+        font-size: 10px;
+        margin-bottom: 8px;
+        white-space: normal;
+        border-right: none;
+        animation: none;
       }
 
       .profile-tags {
-        gap: 8px;
-        margin-bottom: 12px;
+        gap: 4px;
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .tag {
-        font-size: 10px;
-        padding: 4px 8px;
+        font-size: 8px;
+        padding: 3px 6px;
       }
 
       .social-links {
-        margin-top: 12px;
+        margin-top: 8px;
       }
 
       .facts h2, .achievements h2 {
-        font-size: 18px;
-        margin-bottom: 15px;
+        font-size: 16px;
+        margin-bottom: 10px;
       }
 
       .facts ul {
-        font-size: 11px;
-        line-height: 1.6;
+        font-size: 10px;
+        line-height: 1.4;
+        padding-left: 15px;
       }
 
       .achievements-list {
-        gap: 8px;
+        gap: 6px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
       }
 
       .achievement {
-        font-size: 9px;
-        padding: 5px 10px;
+        font-size: 8px;
+        padding: 4px 8px;
+        text-align: center;
       }
 
       /* Loadouts Section Mobile Styles */
       .loadouts-section {
         width: 100%;
-        max-width: 320px;
-        height: 350px;
+        max-width: 350px;
+        height: auto;
+        min-height: 320px;
         margin: 0;
-        padding: 15px;
+        padding: 10px;
+        flex-shrink: 0;
       }
 
       .section-title {
-        font-size: 18px;
-        margin-bottom: 12px;
-      }
-
-      .loadouts-container {
-        height: calc(100% - 50px);
-        padding-right: 8px;
-      }
-
-      .loadout-item {
-        margin-bottom: 12px;
-        padding: 10px;
-      }
-
-      .loadout-image {
-        height: 100px;
+        font-size: 16px;
         margin-bottom: 8px;
       }
 
-      .loadout-caption {
-        font-size: 11px;
-      }
-
-      /* Card Navigation Mobile */
-      .card-nav {
-        gap: 8px;
-        margin-top: 8px;
-        order: -1;
-      }
-
-      .nav-btn {
-        padding: 8px 15px;
-        font-size: 12px;
-      }
-
-      /* BGM Toggle Mobile */
-      #toggleBgm {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        top: 15px;
-        right: 15px;
-      }
-
-      .loading-screen h1 {
-        font-size: 24px;
-        line-height: 1.2;
-      }
-
-      .start-btn {
-        padding: 12px 24px;
-        font-size: 16px;
-        min-width: 180px;
-        min-height: 45px;
-      }
-    }
-
-    @media (max-width: 400px) {
-      .card-container {
-        height: 400px;
-        max-width: 280px;
-      }
-
-      .front img {
-        height: 130px;
-      }
-
-      .front h1 {
-        font-size: 18px;
-      }
-
-      .typewriter {
-        font-size: 10px;
-      }
-
-      .tag {
-        font-size: 9px;
-        padding: 3px 6px;
-      }
-
-      .loadouts-section {
-        max-width: 280px;
-        height: 300px;
-        padding: 12px;
-      }
-
-      .section-title {
-        font-size: 16px;
+      .loadouts-container {
+        height: auto;
+        min-height: 240px;
+        padding-right: 3px;
       }
 
       .loadout-item {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         padding: 8px;
       }
 
       .loadout-image {
-        height: 80px;
+        height: 90px;
+        margin-bottom: 4px;
       }
 
       .loadout-caption {
         font-size: 10px;
       }
 
+      /* Card Navigation Mobile */
+      .card-nav {
+        gap: 6px;
+        margin-top: 8px;
+        order: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
       .nav-btn {
         padding: 6px 12px;
-        font-size: 11px;
+        font-size: 10px;
+        min-width: 60px;
+      }
+
+      /* BGM Toggle Mobile */
+      #toggleBgm {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        top: 8px;
+        right: 8px;
       }
 
       .loading-screen h1 {
         font-size: 20px;
+        line-height: 1.2;
+        padding: 0 10px;
       }
 
       .start-btn {
-        padding: 10px 20px;
+        padding: 8px 16px;
         font-size: 14px;
-        min-width: 160px;
-        min-height: 40px;
+        min-width: 140px;
+        min-height: 35px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      body {
+        padding: 55px 3px 8px;
+      }
+
+      .content {
+        padding: 3px;
+        gap: 3px;
+      }
+
+      .main-layout {
+        gap: 3px;
+      }
+
+      .card-container {
+        min-height: 280px;
+        max-width: 300px;
+      }
+
+      .card {
+        min-height: 280px;
+        padding: 8px;
+      }
+
+      .front img {
+        height: 120px;
+        margin-bottom: 6px;
+      }
+
+      .front h1 {
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+
+      .typewriter {
+        font-size: 9px;
+        margin-bottom: 6px;
+      }
+
+      .tag {
+        font-size: 7px;
+        padding: 2px 4px;
+      }
+
+      .loadouts-section {
+        max-width: 300px;
+        min-height: 280px;
+        padding: 8px;
+      }
+
+      .section-title {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      .loadout-item {
+        margin-bottom: 6px;
+        padding: 6px;
+      }
+
+      .loadout-image {
+        height: 80px;
+        margin-bottom: 3px;
+      }
+
+      .loadout-caption {
+        font-size: 9px;
+      }
+
+      .nav-btn {
+        padding: 4px 8px;
+        font-size: 9px;
+        min-width: 50px;
+      }
+
+      .loading-screen h1 {
+        font-size: 16px;
+      }
+
+      .start-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: 120px;
+        min-height: 30px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      body {
+        padding: 50px 2px 5px;
+      }
+
+      .content {
+        padding: 2px;
+        gap: 2px;
+      }
+
+      .main-layout {
+        gap: 2px;
+      }
+
+      .card-container {
+        min-height: 250px;
+        max-width: 280px;
+      }
+
+      .card {
+        min-height: 250px;
+        padding: 6px;
+      }
+
+      .front img {
+        height: 100px;
+        margin-bottom: 4px;
+      }
+
+      .front h1 {
+        font-size: 14px;
+        margin-bottom: 3px;
+      }
+
+      .typewriter {
+        font-size: 8px;
+        margin-bottom: 4px;
+      }
+
+      .tag {
+        font-size: 6px;
+        padding: 1px 3px;
+      }
+
+      .loadouts-section {
+        max-width: 280px;
+        min-height: 250px;
+        padding: 6px;
+      }
+
+      .section-title {
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      .loadout-item {
+        margin-bottom: 4px;
+        padding: 4px;
+      }
+
+      .loadout-image {
+        height: 70px;
+        margin-bottom: 2px;
+      }
+
+      .loadout-caption {
+        font-size: 8px;
+      }
+
+      .nav-btn {
+        padding: 3px 6px;
+        font-size: 8px;
+        min-width: 40px;
+      }
+
+      .loading-screen h1 {
+        font-size: 14px;
+      }
+
+      .start-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+        min-width: 100px;
+        min-height: 25px;
       }
     }
 
@@ -573,8 +720,157 @@
     }
 
     @keyframes slideInUp {
-      to {
-        transform: translateY(0);
-        opacity: 1;
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+    
+    /* Top Navigation */
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 5px 0;
+      z-index: 100;
+      transition: background 0.3s, padding 0.3s, backdrop-filter 0.3s;
+    }
+    
+    .top-nav:hover {
+      background: rgba(10, 46, 79, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 10px 0;
+      border-bottom: 1px solid #00f7ff;
+    }
+    
+    .top-nav .nav-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: #fff;
+      opacity: 0.7;
+      padding: 10px 20px;
+    }
+    
+    .top-nav .nav-btn.active {
+      color: #00f7ff;
+      border-bottom: 1px solid #00f7ff;
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    
+    /* View Sections */
+    .view-section {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, #0a2e4f, #1a4d7a);
+    }
+    
+    .view-section.hidden {
+      display: none;
+    }
+    
+    #codmIdPage .codm-id-content {
+      text-align: center;
+      max-width: 90%;
+    }
+    
+    #codmIdPage .section-title {
+      margin-bottom: 10px;
+    }
+    
+    #codmIdPage .subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: #e0f7ff;
+      margin-bottom: 20px;
+    }
+    
+    #codmIdPage img {
+      max-width: 100%;
+      height: auto;
+      border: 3px solid #00f7ff;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 247, 255, 0.5);
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 65px 8px 15px;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+    
+      .top-nav {
+        background: rgba(10, 46, 79, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 8px 0;
+        border-bottom: 1px solid #00f7ff;
+      }
+    
+      .main-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+      }
+    
+      .card-container,
+      .loadouts-section {
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+        min-height: 350px;
+      }
+    
+      .loadouts-section {
+        margin-top: 0;
+      }
+    
+      #codmIdPage img {
+        max-width: 90vw;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      body {
+        padding: 60px 8px 15px;
+      }
+
+      .top-nav .nav-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+    
+      .front h1 {
+        font-size: 20px;
+      }
+    
+      .typewriter {
+        font-size: 11px;
+        white-space: normal;
+        border-right: none;
+        animation: none;
+      }
+    
+      #codmIdPage .section-title {
+        font-size: 20px;
+      }
+    
+      #codmIdPage .subtitle {
+        font-size: 12px;
       }
     }

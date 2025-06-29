@@ -140,3 +140,23 @@ loadoutItems.forEach(item => {
     clickSound.play().catch((error) => console.warn('Click sound failed:', error));
   });
 });
+
+// Top navigation
+const homeBtn = document.getElementById('homeBtn');
+const codmIdBtn = document.getElementById('codmIdBtn');
+const mainPage = document.getElementById('mainPage');
+const codmIdPage = document.getElementById('codmIdPage');
+
+homeBtn.addEventListener('click', () => {
+  mainPage.classList.remove('hidden');
+  codmIdPage.classList.add('hidden');
+  homeBtn.classList.add('active');
+  codmIdBtn.classList.remove('active');
+});
+
+codmIdBtn.addEventListener('click', () => {
+  mainPage.classList.add('hidden');
+  codmIdPage.classList.remove('hidden');
+  homeBtn.classList.remove('active');
+  codmIdBtn.classList.add('active');
+});
