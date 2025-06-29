@@ -89,10 +89,3 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
-
-    // Hover sound for tags, achievements, and social buttons
-    document.querySelectorAll('.tag, .achievement, .social-btn').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        hoverSound.play().catch((error) => console.warn('Hover sound failed:', error));
-      });
-    });
